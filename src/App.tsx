@@ -4,9 +4,12 @@ import SoundBoard from './components/SoundBoard/SoundBoard'
 import MaleHouseNewsAudio from './audio/Break-Is-Over-with-Voicemod-Text-to-Song.mp3'
 import FemaleHouseNewsAudio from './audio/Hallelujah-with-Voicemod-Text-to-Song.mp3'
 import OwenWilsonWow from './audio/Owen-Wilson-Wow.m4a'
+import EmotionalDamage from './audio/emotional-damage.mp3'
 import JordanYay from './audio/Jordan-yay.m4a'
 import JordanSuccessfulStart from './audio/Jordan-successful-start.m4a'
 import JordanFantasticDay from './audio/Jordan-fantastic-day.m4a'
+import JordanThankYou from './audio/Jordan-thank-you.m4a'
+import JordanSoundOfSilence from './audio/Jordan-sound-of-silence.m4a'
 
 const sounds = [
   {
@@ -31,6 +34,13 @@ const sounds = [
     soundName: 'Owen Wilson - Wow',
   },
   {
+    audio: OwenWilsonWow,
+    colour: '#53915e',
+    keyCode: 83,
+    label: 'S',
+    soundName: 'Emotional Damage',
+  },
+  {
     audio: JordanYay,
     colour: '#a8216e',
     keyCode: 81,
@@ -50,6 +60,20 @@ const sounds = [
     keyCode: 69,
     label: 'E',
     soundName: 'Jordan - Fantastic Day',
+  },
+  {
+    audio: JordanThankYou,
+    colour: '#a8216e',
+    keyCode: 82,
+    label: 'R',
+    soundName: 'Jordan - Thank You',
+  },
+  {
+    audio: JordanSoundOfSilence,
+    colour: '#a8216e',
+    keyCode: 84,
+    label: 'T',
+    soundName: 'Jordan - Sound of Silence',
   },
   // Add more sounds here
 ]
