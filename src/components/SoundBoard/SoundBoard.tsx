@@ -90,6 +90,7 @@ const SoundBoard: React.FC<SoundBoardProps> = ({ sounds }) => {
               key={index}
               colour={sound.colour}
               keyCode={sound.keyCode}
+              height={sound.height}
               label={sound.label}
               soundName={sound.soundName}
               audioSrc={sound.audio}

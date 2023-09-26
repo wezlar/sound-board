@@ -12,10 +12,11 @@ interface SoundButtonProps {
   soundName: string
 }
 
-const StyledSoundButton = styled.div<{ $colour?: string }>`
+const StyledSoundButton = styled.div<{ $colour?: string; $height?: number }>`
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: ${(props) => props.$colour ?? '#eeeeee'};
+  min-height: ${(props) => Number(props.$height) * 80 ?? '80'}px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
@@ -37,7 +38,7 @@ const StyledSoundButtonLabel = styled.span`
 const SoundButton: React.FC<SoundButtonProps> = ({
   audioSrc,
   colour,
-  height,
+  height = 1,
   keyCode,
   label,
   onClick,
@@ -47,7 +48,7 @@ const SoundButton: React.FC<SoundButtonProps> = ({
   const audioRef = React.useRef<HTMLAudioElement>(null)
 
   return (
-    <StyledSoundButton data-key={keyCode} onClick={onClick} $colour={colour}>
+    <StyledSoundButton data-key={keyCode} onClick={onClick} $colour={colour} $height={height}>
       <StyledSoundButtonLabel>{soundName}</StyledSoundButtonLabel>
       <kbd>{label}</kbd>
       <audio ref={audioRef} data-key={keyCode} src={audioSrc} onEnded={onEnded}></audio>
