@@ -16,7 +16,6 @@ const playSound = (keycode: number): void => {
   audio.volume = Number(audio.dataset?.volume) ?? 1
   void audio.play()
   key.classList.add('playing')
-  // }
 }
 
 const stopAllSounds = (): void => {
@@ -80,19 +79,7 @@ const SoundBoard: React.FC<SoundBoardProps> = ({ sounds }) => {
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1200: 4 }}>
         <Masonry gutter="10px">
           {sounds.map((sound, index) => (
-            <SoundButton
-              key={index}
-              sound={sound}
-              // colour={sound.colour}
-              // keyCode={sound.keyCode}
-              // height={sound.height}
-              // label={sound.label}
-              // soundName={sound.soundName}
-              // audioSrc={sound.audio}
-              // volume={sound.volume}
-              onClick={handleMouseEvent}
-              onEnded={handleEndOfAudio}
-            />
+            <SoundButton key={index} sound={sound} onClick={handleMouseEvent} onEnded={handleEndOfAudio} />
           ))}
         </Masonry>
       </ResponsiveMasonry>

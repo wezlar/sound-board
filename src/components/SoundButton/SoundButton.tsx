@@ -4,13 +4,6 @@ import type { SoundProps } from '../SoundBoard/SoundBoard'
 
 interface SoundButtonProps {
   sound: SoundProps
-  // audioSrc: string
-  // colour?: string
-  // height?: number
-  // keyCode: number
-  // label: string
-  // volume?: number
-  // soundName: string
   onClick: (e: React.MouseEvent) => void
   onEnded: (e: React.SyntheticEvent<HTMLAudioElement>) => void
 }
@@ -28,7 +21,6 @@ const StyledSoundButton = styled.div<{ $colour?: string; $height?: number }>`
   }
 
   &.playing {
-    /* border: 4px solid #03a729; */
     box-shadow: inset 0 0 0 4px #03a729;
   }
 `
