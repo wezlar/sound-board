@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import type { SoundProps } from '../SoundBoard/SoundBoard'
 
 interface SoundButtonProps {
-  audioSrc: string
-  colour?: string
-  height?: number
-  keyCode: number
-  label: string
+  sound: SoundProps
+  // audioSrc: string
+  // colour?: string
+  // height?: number
+  // keyCode: number
+  // label: string
+  // volume?: number
+  // soundName: string
   onClick: (e: React.MouseEvent) => void
   onEnded: (e: React.SyntheticEvent<HTMLAudioElement>) => void
-  soundName: string
-  volume?: number
 }
 
 const StyledSoundButton = styled.div<{ $colour?: string; $height?: number }>`
@@ -36,24 +38,16 @@ const StyledSoundButtonLabel = styled.span`
   margin-bottom: 5px;
 `
 
-const SoundButton: React.FC<SoundButtonProps> = ({
-  audioSrc,
-  colour,
-  height = 1,
-  keyCode,
-  label,
-  onClick,
-  onEnded,
-  soundName,
-  volume = 1,
-}) => {
+const SoundButton: React.FC<SoundButtonProps> = ({ onClick, onEnded, sound }) => {
   const audioRef = React.useRef<HTMLAudioElement>(null)
+
+  const { audio, colour, height = 1, keyCode, label, soundName, volume = 1 } = sound
 
   return (
     <StyledSoundButton data-key={keyCode} onClick={onClick} $colour={colour} $height={height}>
       <StyledSoundButtonLabel>{soundName}</StyledSoundButtonLabel>
       <kbd>{label}</kbd>
-      <audio ref={audioRef} data-key={keyCode} src={audioSrc} onEnded={onEnded} data-volume={volume}></audio>
+      <audio ref={audioRef} data-key={keyCode} src={audio} onEnded={onEnded} data-volume={volume}></audio>
     </StyledSoundButton>
   )
 }

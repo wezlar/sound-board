@@ -13,9 +13,7 @@ const playSound = (keycode: number): void => {
   if (audio === null) return
 
   audio.currentTime = 0
-  console.log({ volume: audio.volume, data: audio.dataset?.volume })
   audio.volume = Number(audio.dataset?.volume) ?? 1
-  console.log({ volume: audio.volume })
   void audio.play()
   key.classList.add('playing')
   // }
@@ -31,7 +29,7 @@ const stopAllSounds = (): void => {
   })
 }
 
-interface SoundProps {
+export interface SoundProps {
   audio: string
   colour?: string
   height?: number
@@ -84,13 +82,14 @@ const SoundBoard: React.FC<SoundBoardProps> = ({ sounds }) => {
           {sounds.map((sound, index) => (
             <SoundButton
               key={index}
-              colour={sound.colour}
-              keyCode={sound.keyCode}
-              height={sound.height}
-              label={sound.label}
-              soundName={sound.soundName}
-              audioSrc={sound.audio}
-              volume={sound.volume}
+              sound={sound}
+              // colour={sound.colour}
+              // keyCode={sound.keyCode}
+              // height={sound.height}
+              // label={sound.label}
+              // soundName={sound.soundName}
+              // audioSrc={sound.audio}
+              // volume={sound.volume}
               onClick={handleMouseEvent}
               onEnded={handleEndOfAudio}
             />
