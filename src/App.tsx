@@ -26,6 +26,7 @@ const sounds = [
     keyCode: 32,
     label: 'Space',
     soundName: 'Crowd Cheer',
+    volume: 0.5,
   },
   {
     audio: JingleHouseNews,
@@ -107,6 +108,7 @@ const sounds = [
     keyCode: 90,
     label: 'Z',
     soundName: 'Correct',
+    volume: 0.5,
   },
   {
     audio: Wrong,
@@ -114,6 +116,7 @@ const sounds = [
     keyCode: 88,
     label: 'X',
     soundName: 'Wrong',
+    volume: 0.5,
   },
   {
     audio: DrumRoll,

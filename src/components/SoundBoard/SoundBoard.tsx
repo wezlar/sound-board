@@ -12,15 +12,10 @@ const playSound = (keycode: number): void => {
   const key = document.querySelector(`div[data-key="${keycode}"]`) as HTMLDivElement
   if (audio === null) return
 
-  // if (audio.currentTime !== 0 && !audio.ended && !isShiftPressed) {
-  //   console.log('PAUSING', isShiftPressed)
-  //   audio.pause()
-  //   audio.currentTime = 0
-  //   key.classList.add('playing')
-  //   key.classList.remove('playing')
-  // } else {
-  console.log('PLAYING')
   audio.currentTime = 0
+  console.log({ volume: audio.volume, data: audio.dataset?.volume })
+  audio.volume = Number(audio.dataset?.volume) ?? 1
+  console.log({ volume: audio.volume })
   void audio.play()
   key.classList.add('playing')
   // }
@@ -43,6 +38,7 @@ interface SoundProps {
   keyCode: number
   label: string
   soundName: string
+  volume?: number
 }
 
 interface SoundBoardProps {
@@ -94,6 +90,7 @@ const SoundBoard: React.FC<SoundBoardProps> = ({ sounds }) => {
               label={sound.label}
               soundName={sound.soundName}
               audioSrc={sound.audio}
+              volume={sound.volume}
               onClick={handleMouseEvent}
               onEnded={handleEndOfAudio}
             />

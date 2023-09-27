@@ -10,6 +10,7 @@ interface SoundButtonProps {
   onClick: (e: React.MouseEvent) => void
   onEnded: (e: React.SyntheticEvent<HTMLAudioElement>) => void
   soundName: string
+  volume?: number
 }
 
 const StyledSoundButton = styled.div<{ $colour?: string; $height?: number }>`
@@ -44,6 +45,7 @@ const SoundButton: React.FC<SoundButtonProps> = ({
   onClick,
   onEnded,
   soundName,
+  volume = 1,
 }) => {
   const audioRef = React.useRef<HTMLAudioElement>(null)
 
@@ -51,7 +53,7 @@ const SoundButton: React.FC<SoundButtonProps> = ({
     <StyledSoundButton data-key={keyCode} onClick={onClick} $colour={colour} $height={height}>
       <StyledSoundButtonLabel>{soundName}</StyledSoundButtonLabel>
       <kbd>{label}</kbd>
-      <audio ref={audioRef} data-key={keyCode} src={audioSrc} onEnded={onEnded}></audio>
+      <audio ref={audioRef} data-key={keyCode} src={audioSrc} onEnded={onEnded} data-volume={volume}></audio>
     </StyledSoundButton>
   )
 }
