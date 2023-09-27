@@ -100,6 +100,7 @@ const sounds = [
     keyCode: 85,
     label: 'U',
     soundName: 'Emotional Damage',
+    volume: 0.7,
   },
 
   {
