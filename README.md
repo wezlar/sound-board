@@ -1,10 +1,30 @@
-# Getting Started with Create React App
+# Soundboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Quick project to add audio snippets to a soundboard to be used during meetings or quiz nights.
 
-## Available Scripts
+## Adding new Audio
 
-In the project directory, you can run:
+All audio files that can play in a browser can be used. Current ones are stored in `/src/audio/`. Add any new ones to that folder.
+
+You then need to head over to the `App.tsx` file and import the new audio file.
+
+Final step is to update the sounds array with a new Sound Object:
+
+```
+{
+  audio: OwenWilsonWow,
+  colour: '#53915e',
+  keyCode: 89,
+  label: 'Y',
+  soundName: 'Owen Wilson - Wow',
+  volume: 1.0, // optional
+  height: 1, // optional
+},
+```
+
+The audio is the file you've imported. The colour is the button colour that appears on the screen. Keycode is the keyboard code of the shortcut you want to press (they print out in the console if you are unsure which one you need). The label is the label of the Key being pressed so that it indicates it on the screen. And finally there is soundName which is a visual name for the sound that makes the button clear which audio it is for.
+
+Volume and height are both optional. Both default to `1` if not provided. Volume can range from `0` to `1`, with 1 being full volume. `0.5` would be half volume. Height is for the height of the button. Changing this to 2 would double the height of the button.
 
 ### `npm start`
 
@@ -28,19 +48,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

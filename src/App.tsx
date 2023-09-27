@@ -35,6 +35,7 @@ const sounds = [
     label: 'A',
     soundName: 'House News Jingle',
     height: 2,
+    volume: 0.7,
   },
   {
     audio: JingleGongShort,
@@ -43,6 +44,7 @@ const sounds = [
     label: 'S',
     soundName: 'Gong Jingle Short',
     height: 2,
+    volume: 0.7,
   },
   {
     audio: JingleGongLong,
@@ -51,6 +53,7 @@ const sounds = [
     label: 'd',
     soundName: 'Gong Jingle Long',
     height: 2,
+    volume: 0.7,
   },
   {
     audio: JordanYay,
