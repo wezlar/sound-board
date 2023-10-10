@@ -14,19 +14,60 @@ import Correct from './audio/Correct.m4a'
 import Wrong from './audio/Wrong.m4a'
 import DrumRollFancy from './audio/Drum-Roll-Fancy.m4a'
 import DrumRoll from './audio/Drum-Roll.m4a'
+import SadTrombone from './audio/sad-trombone.mp3'
+import Tada from './audio/tada.mp3'
+import MarioLostLife from './audio/mario-lost-life.mp3'
+import DeathFlute from './audio/death-flute-heart-will-go-on.mp3'
+import DeathEnthusiasm from './audio/death-curb-your-enthusiasm-theme.mp3'
+import ObiWanHelloThere from './audio/obi-wan-hello-there.mp3'
+import haha from './audio/ha-ha.mp3'
+
+import Airhorn from './audio/airhorn.mp3'
+import Aww from './audio/aww.mp3'
 
 import JingleHouseNews from './audio/Jingle-House-News.m4a'
 import JingleGongLong from './audio/Jingle-Gong-Long.m4a'
 import JingleGongShort from './audio/Jingle-Gong-Short.m4a'
+import Countdown from './audio/20-sec-countdown.mp3'
+import JohnCena from './audio/john-cena.mp3'
 
 const sounds = [
   {
     audio: Cheering,
-    colour: '#d2d51a',
+    colour: '#d5521a',
     keyCode: 32,
     label: 'Space',
     soundName: 'Crowd Cheer',
     volume: 0.5,
+    height: 1,
+  },
+  {
+    audio: Airhorn,
+    colour: '#43bab2',
+    keyCode: 49,
+    label: '1',
+    soundName: 'Airhorn',
+  },
+  {
+    audio: Aww,
+    colour: '#43bab2',
+    keyCode: 50,
+    label: '2',
+    soundName: 'Aww',
+  },
+  {
+    audio: ObiWanHelloThere,
+    colour: '#43bab2',
+    keyCode: 51,
+    label: '3',
+    soundName: 'Obi Wan Hello There',
+  },
+  {
+    audio: haha,
+    colour: '#43bab2',
+    keyCode: 52,
+    label: '4',
+    soundName: 'Ha ha',
   },
   {
     audio: JingleHouseNews,
@@ -54,6 +95,21 @@ const sounds = [
     soundName: 'Gong Jingle Long',
     height: 2,
     volume: 0.7,
+  },
+  {
+    audio: Countdown,
+    colour: '#535791',
+    keyCode: 70,
+    label: 'F',
+    soundName: 'Countdown',
+  },
+  {
+    audio: JohnCena,
+    colour: '#535791',
+    keyCode: 71,
+    label: 'G',
+    soundName: 'John Cena',
+    volume: 0.6,
   },
   {
     audio: JordanYay,
@@ -105,7 +161,21 @@ const sounds = [
     soundName: 'Emotional Damage',
     volume: 0.7,
   },
-
+  {
+    audio: DeathFlute,
+    colour: '#53915e',
+    keyCode: 73,
+    label: 'I',
+    soundName: 'Death Flute',
+  },
+  {
+    audio: DeathEnthusiasm,
+    colour: '#53915e',
+    keyCode: 79,
+    label: 'O',
+    soundName: 'Death Enthusiasm',
+    volume: 0.7,
+  },
   {
     audio: Correct,
     colour: '#d2d51a',
@@ -135,6 +205,28 @@ const sounds = [
     keyCode: 86,
     label: 'V',
     soundName: 'Drum Roll Fancy',
+  },
+  {
+    audio: SadTrombone,
+    colour: '#d2d51a',
+    keyCode: 66,
+    label: 'B',
+    soundName: 'Sad Trombone',
+  },
+  {
+    audio: Tada,
+    colour: '#d2d51a',
+    keyCode: 78,
+    label: 'N',
+    soundName: 'Tada',
+    volumw: 0.8,
+  },
+  {
+    audio: MarioLostLife,
+    colour: '#d2d51a',
+    keyCode: 77,
+    label: 'M',
+    soundName: 'Mario Lost Life',
   },
   // Add more sounds here
 ]
