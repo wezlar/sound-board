@@ -25,6 +25,10 @@ const stopAllSounds = (): void => {
   audioElements.forEach((audio) => {
     audio.pause()
     audio.currentTime = 0
+    const parentElement = audio?.parentNode
+    if (parentElement instanceof HTMLElement) {
+      parentElement?.classList?.remove('playing')
+    }
   })
 }
 
