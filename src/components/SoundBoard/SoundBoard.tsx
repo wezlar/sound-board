@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+
+import { type ModeType } from '../../App'
+import SoundBoards from '../../audio/soundboards'
 import SoundButton from '../SoundButton/SoundButton'
 
 const StyledWrapper = styled.div`
@@ -43,12 +46,14 @@ export interface SoundProps {
 }
 
 interface SoundBoardProps {
-  sounds: SoundProps[]
+  mode: ModeType
 }
 
-const SoundBoard: React.FC<SoundBoardProps> = ({ sounds }) => {
+const SoundBoard: React.FC<SoundBoardProps> = ({ mode }) => {
+  const sounds = SoundBoards[mode]
+
   const handleKeyPressEvent = (e: KeyboardEvent): void => {
-    console.log({ handleKeyPressEvent: e.keyCode })
+    console.log({ handleKeyPressEvent: e.keyCode, key: e.key })
     const keycode = e.keyCode
     if (keycode === 27) {
       // escape key
@@ -80,7 +85,7 @@ const SoundBoard: React.FC<SoundBoardProps> = ({ sounds }) => {
 
   return (
     <StyledWrapper>
-      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1200: 4 }}>
+      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 470: 2, 750: 3, 900: 4, 1200: 5, 1400: 6 }}>
         <Masonry gutter="10px">
           {sounds.map((sound, index) => (
             <SoundButton key={index} sound={sound} onClick={handleMouseEvent} onEnded={handleEndOfAudio} />

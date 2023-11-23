@@ -12,7 +12,7 @@ const StyledSoundButton = styled.div<{ $colour?: string; $height?: number }>`
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: ${(props) => props.$colour ?? '#eeeeee'};
-  min-height: ${(props) => Number(props.$height) * 80 ?? '80'}px;
+  min-height: ${(props) => Number(props.$height) * 60 ?? '60'}px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
