@@ -1,6 +1,8 @@
 import jordan from './jordan/jordansoundboard'
 
 import JordanYay from './jordan/Jordan-yay.m4a'
+import JordanWicked from './jordan/Jordan-wicked.m4a'
+
 import OwenWilsonWow from './Owen-Wilson-wow.m4a'
 import EmotionalDamage from './emotional-damage.mp3'
 
@@ -16,6 +18,17 @@ import DeathFlute from './death-flute-heart-will-go-on.mp3'
 import DeathEnthusiasm from './death-curb-your-enthusiasm-theme.mp3'
 import ObiWanHelloThere from './obi-wan-hello-there.mp3'
 import haha from './ha-ha.mp3'
+import CorrectPositiveNotification from './correct-positive-notification.m4a'
+import CartoonPositiveSound from './cartoon-positive-sound.wav'
+import CartoonFailurePiano from './cartoon-failure-piano.wav'
+import CorrectAnswerReward from './correct-answer-reward.m4a'
+import WinningAnExtraBonus from './winning-an-extra-bonus.wav'
+import WrongAnswerFail from './wrong-answer-fail-notification.wav'
+import NegativeAnswerLose from './negative-answer-lose.m4a'
+
+import WickedWicked from './wicked-wicked.m4a'
+import JungleIsMassive from './jungle-is-massive.m4a'
+import Booyaka from './booyaka.m4a'
 
 import Airhorn from './airhorn.mp3'
 import Aww from './aww.mp3'
@@ -25,6 +38,8 @@ import JingleGongLong from './Jingle-Gong-Long.m4a'
 import JingleGongShort from './Jingle-Gong-Short.m4a'
 import Countdown from './20-sec-countdown.mp3'
 import JohnCena from './john-cena.mp3'
+import SimpleCountdown from './simple-countdown.m4a'
+import JokeDrum from './joke-drum.m4a'
 
 type HexColor = `#${string}`
 
@@ -79,6 +94,59 @@ const normal: SoundBoardType = [
     soundName: 'Ha ha',
   },
   {
+    audio: NegativeAnswerLose,
+    colour: '#d2d51a',
+    keyCode: 53,
+    label: '5',
+    soundName: 'Negative Answer Lose',
+    volume: 0.5,
+  },
+  {
+    audio: CartoonFailurePiano,
+    colour: '#d2d51a',
+    keyCode: 54,
+    label: '6',
+    soundName: 'Cartoon Failure Piano',
+    volume: 0.5,
+  },
+
+  {
+    audio: WickedWicked,
+    colour: '#009688',
+    keyCode: 81,
+    label: 'Q',
+    soundName: 'Wicked',
+  },
+  {
+    audio: JungleIsMassive,
+    colour: '#009688',
+    keyCode: 87,
+    label: 'W',
+    soundName: 'Jungle is Massive',
+  },
+  {
+    audio: JordanWicked,
+    colour: '#009688',
+    keyCode: 69,
+    label: 'e',
+    soundName: 'Jordan - Wicked',
+  },
+  // {
+  //   audio: BBBB,
+  //   colour: '#009688',
+  //   keyCode: 82,
+  //   label: 'r',
+  //   soundName: 'BBBB'
+  // },
+  {
+    audio: Booyaka,
+    colour: '#009688',
+    keyCode: 84,
+    label: 't',
+    soundName: 'Booyakasha',
+  },
+
+  {
     audio: JingleHouseNews,
     colour: '#535791',
     keyCode: 65,
@@ -121,6 +189,20 @@ const normal: SoundBoardType = [
     volume: 0.6,
   },
   {
+    audio: SimpleCountdown,
+    colour: '#535791',
+    keyCode: 74,
+    label: 'J',
+    soundName: 'Simple Countdown',
+  },
+  {
+    audio: JokeDrum,
+    colour: '#535791',
+    keyCode: 72,
+    label: 'H',
+    soundName: 'Joke Drum',
+  },
+  {
     audio: JordanYay,
     colour: '#a8216e',
     keyCode: 97,
@@ -158,6 +240,22 @@ const normal: SoundBoardType = [
     volume: 0.7,
   },
   {
+    audio: CorrectPositiveNotification,
+    colour: '#d2d51a',
+    keyCode: 16,
+    label: 'Shift',
+    soundName: 'Correct Positive Notification',
+    volume: 0.5,
+  },
+  {
+    audio: CartoonPositiveSound,
+    colour: '#d2d51a',
+    keyCode: 192,
+    label: '` or ~',
+    soundName: 'Correct Positive Sound',
+    volume: 0.5,
+  },
+  {
     audio: Correct,
     colour: '#d2d51a',
     keyCode: 90,
@@ -166,47 +264,68 @@ const normal: SoundBoardType = [
     volume: 0.5,
   },
   {
-    audio: Wrong,
+    audio: CorrectAnswerReward,
     colour: '#d2d51a',
     keyCode: 88,
     label: 'X',
-    soundName: 'Wrong',
+    soundName: 'Correct Answer Reward',
     volume: 0.5,
-  },
-  {
-    audio: DrumRoll,
-    colour: '#d2d51a',
-    keyCode: 67,
-    label: 'C',
-    soundName: 'Drum Roll',
-  },
-  {
-    audio: DrumRollFancy,
-    colour: '#d2d51a',
-    keyCode: 86,
-    label: 'V',
-    soundName: 'Drum Roll Fancy',
-  },
-  {
-    audio: SadTrombone,
-    colour: '#d2d51a',
-    keyCode: 66,
-    label: 'B',
-    soundName: 'Sad Trombone',
   },
   {
     audio: Tada,
     colour: '#d2d51a',
+    keyCode: 67,
+    label: 'C',
+    soundName: 'Tada',
+  },
+  {
+    audio: WinningAnExtraBonus,
+    colour: '#d2d51a',
+    keyCode: 86,
+    label: 'V',
+    soundName: 'Winning a Bonus',
+  },
+  {
+    audio: DrumRollFancy,
+    colour: '#d2d51a',
+    keyCode: 66,
+    label: 'B',
+    soundName: 'Drum Roll Fancy',
+  },
+  {
+    audio: DrumRoll,
+    colour: '#d2d51a',
     keyCode: 78,
     label: 'N',
-    soundName: 'Tada',
+    soundName: 'Drum Roll',
+  },
+  {
+    audio: WrongAnswerFail,
+    colour: '#d2d51a',
+    keyCode: 77,
+    label: 'M',
+    soundName: 'Wrong Answer Fail',
+  },
+  {
+    audio: Wrong,
+    colour: '#d2d51a',
+    keyCode: 188,
+    label: ', or <',
+    soundName: 'Wrong',
+  },
+  {
+    audio: SadTrombone,
+    colour: '#d2d51a',
+    keyCode: 190,
+    label: '. or >',
+    soundName: 'Sad Trombone',
     volume: 0.8,
   },
   {
     audio: MarioLostLife,
     colour: '#d2d51a',
-    keyCode: 77,
-    label: 'M',
+    keyCode: 191,
+    label: '/',
     soundName: 'Mario Lost Life',
   },
   // Add more sounds here
