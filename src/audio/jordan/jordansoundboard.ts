@@ -32,11 +32,27 @@ import JordanThatsReallyRude from './Jordan-thats-really-rude.m4a'
 import JordanTouchedWood from './Jordan-touched-wood.m4a'
 import JordanAnythingElse from './Jordan-anything-else.m4a'
 
+import JordanShowingWhatICanDo from './Jordan-showing-what-I-can-do.m4a'
+import JordanSorryAboutThat from './Jordan-sorry-about-that.m4a'
+import JordanWeJustDontKnow from './Jordan-we-just-dont-know.m4a'
+
+import JordanWicked from './Jordan-wicked.m4a'
 import JordanUrm from './Jordan-urm.m4a'
 import JordanYeah from './Jordan-yeah.m4a'
 import JordanNo from './Jordan-no.m4a'
+import JordanFuckingHell from './Jordan-fucking-hell.m4a'
+import JordanLaugh from './Jordan-laugh.m4a'
+import JordanLivingTheDream from './Jordan-living-the-dream.m4a'
+import JordanOK from './Jordan-ok.m4a'
 
 const jordan: SoundBoardType = [
+  {
+    audio: JordanWicked,
+    colour: '#a8216e',
+    keyCode: 192,
+    label: '§',
+    soundName: 'Wicked',
+  },
   {
     audio: JordanYeah,
     colour: '#a8216e',
@@ -86,6 +102,34 @@ const jordan: SoundBoardType = [
     label: '7',
     soundName: 'Anything else',
   },
+  {
+    audio: JordanFuckingHell,
+    colour: '#a8216e',
+    keyCode: 56,
+    label: '8',
+    soundName: 'Fucking Hell',
+  },
+  {
+    audio: JordanLaugh,
+    colour: '#a8216e',
+    keyCode: 57,
+    label: '9',
+    soundName: 'Ha ha ha',
+  },
+  {
+    audio: JordanLivingTheDream,
+    colour: '#a8216e',
+    keyCode: 48,
+    label: '0',
+    soundName: 'Living the Dream',
+  },
+  {
+    audio: JordanOK,
+    colour: '#a8216e',
+    keyCode: 189,
+    label: '-',
+    soundName: 'OK',
+  },
 
   { audio: JordanDean, colour: '#1e7ee8', keyCode: 81, label: 'q', soundName: 'Dean' },
   { audio: JordanAdam, colour: '#1e7ee8', keyCode: 87, label: 'w', soundName: 'Adam' },
@@ -105,6 +149,10 @@ const jordan: SoundBoardType = [
   { audio: JordanPerfect, colour: '#1e7ee8', keyCode: 74, label: 'j', soundName: 'Perfect' },
   { audio: JordanSoundsGood, colour: '#1e7ee8', keyCode: 75, label: 'k', soundName: 'Sounds good' },
   { audio: JordanThatsCool, colour: '#1e7ee8', keyCode: 76, label: 'l', soundName: 'Thats cool' },
+
+  { audio: JordanShowingWhatICanDo, colour: '#1e7ee8', keyCode: 186, label: ';', soundName: 'Showing what I can do' },
+  { audio: JordanSorryAboutThat, colour: '#1e7ee8', keyCode: 222, label: `' or "`, soundName: 'Sorry about that' },
+  { audio: JordanWeJustDontKnow, colour: '#1e7ee8', keyCode: 220, label: '\\', soundName: 'We just dont know' },
 
   { audio: JordanSweetAsANut, colour: '#DeDe8e', keyCode: 90, label: 'z', soundName: 'Sweet as a nut' },
   { audio: JordanThatsReallyRude, colour: '#DeDe8e', keyCode: 88, label: 'x', soundName: 'Thats really rude' },
